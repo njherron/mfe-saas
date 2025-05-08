@@ -79,7 +79,7 @@ export default function Header({ signedIn, onSignOut }) {
             component={RouterLink}
             to="/"
           >
-            App
+            SaaS (SSPA Demo)
           </Typography>
           <Button
             color="primary"

@@ -1,0 +1,73 @@
+= Micro Frontends with Single-SPA
+:toc:
+:toclevels: 2
+
+This repository is a learning project inspired by the Udemy course on Micro Frontends, available at https://bah.udemy.com/course/microfrontend-course/learn/lecture/23207130. It demonstrates how to build and integrate multiple micro frontends into a cohesive application using **Single-SPA**.
+
+== Overview
+
+The project explores the concepts of **Micro Frontends (MFE)** and **Single-SPA**, showcasing how to structure, develop, and deploy multiple micro frontends. Each micro frontend is built with different frameworks and technologies, working together seamlessly.
+
+=== Key Features
+
+- **React-based components** for the container and marketing app.
+- **Single-SPA integration** to manage multiple micro frontends.
+- **Material-UI** for consistent styling across applications.
+- **Routing** with `react-router-dom` for navigation between pages.
+- **Dynamic module loading** to mount and unmount micro frontends.
+
+== Project Structure
+
+- `container/`: The main application that serves as the shell for the micro frontends.
+- `marketing/`: A micro frontend that serves as the marketing page.
+- `auth/`: (Optional) A placeholder for an authentication micro frontend.
+- `dashboard/`: Simulation of the actual product this fake SaaS provides.
+
+== Getting Started
+
+=== Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+
+=== Installation
+
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:njherron/mfe-saas.git
+   cd mfe-saas
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+=== Running the Application
+
+- The application will be available at `http://localhost:8080`.
+- Navigate through the different micro frontends to explore their functionality.
+
+== Learning Objectives
+
+This project is designed to help you:
+
+- Understand the architecture and benefits of micro frontends.
+- Learn how to use **Single-SPA** to integrate multiple frameworks.
+- Explore dynamic module loading and routing in micro frontends.
+- Gain hands-on experience with **React**, **Material-UI**, and **react-router-dom**.
+
+== Resources
+
+- Udemy Course: https://bah.udemy.com/course/microfrontend-course/learn/lecture/23207130
+- Single-SPA Documentation: https://single-spa.js.org/
+- Material-UI Documentation: https://mui.com/
+
+== License
+
+This project is for educational purposes only and is not intended for production use.

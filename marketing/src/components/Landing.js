@@ -65,6 +65,7 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Album() {
   const classes = useStyles();
+  console.log(classes);
 
   return (
     <React.Fragment>
@@ -79,7 +80,7 @@ export default function Album() {
               color="textPrimary"
               gutterBottom
             >
-              Home Page
+              Welcome
             </Typography>
             <Typography
               variant="h5"
@@ -87,9 +88,9 @@ export default function Album() {
               color="textSecondary"
               paragraph
             >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
+              This is a small portion of a suit of applications that are used
+              to learn about Single-SPA and Micro Front Ends. This is a simple
+              example of a landing page that could be used to market a product.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justifyContent="center">
