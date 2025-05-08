@@ -6,19 +6,20 @@ import App from './App';
 // Mount function to start the app
 const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
     // If defaultHistory is not provided, create a new memory history object
-    const marketingHistory = defaultHistory || createMemoryHistory({
-        initialEntries: [initialPath]
+    const authHistory = defaultHistory || createMemoryHistory({
+        initialEntries: [initialPath],
+        initialIndex: 0
     });
 
     if(onNavigate){
         // Listen to the history object from the marketing app
         // and call the onNavigate function when the path changes
-        marketingHistory.listen(onNavigate);
+        authHistory.listen(onNavigate);
     }
 
     ReactDOM.render(
         // Pass the history object to the App component
-        <App history={marketingHistory} />,
+        <App history={authHistory} />,
         el
     );
 
@@ -28,9 +29,9 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
          * @param nextPathname - the path that the container app is navigating to
          */
         onParentNavigate({pathname: nextPathname}) {
-            if(marketingHistory.location.pathname !== nextPathname) {
+            if(authHistory.location.pathname !== nextPathname) {
                 // We are not on the same path, so we need to update the browser history
-                marketingHistory.push(nextPathname);
+                authHistory.push(nextPathname);
             }
         }
     }
@@ -38,7 +39,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
 
 // If in development and not in container, mount immediately
 if (process.env.NODE_ENV === 'development') {
-    const devRoot = document.querySelector('#_marketing-dev-root');
+    const devRoot = document.querySelector('#_auth-dev-root');
 
     // Mount the app if it is in development and not in a container
     if (devRoot) {

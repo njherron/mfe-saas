@@ -1,12 +1,12 @@
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import React, {useRef, useEffect} from 'react';
 import { useHistory } from "react-router-dom";
 
 export default () => {
-  // This ref will be used to mount the marketing app
-  const ref = useRef(null);
-  // browser history object from the container app
-  const containerHistory = useHistory();
+    // This ref will be used to mount the marketing app
+    const ref = useRef(null);
+    // browser history object from the container app
+    const containerHistory = useHistory();
 
     useEffect(() => {
         const { onParentNavigate } = mount(ref.current, {
@@ -21,7 +21,7 @@ export default () => {
                     // We are not on the same path, so we need to update the browser history
                     containerHistory.push(nextPathname);
                 }
-            }
+            },
         });
 
         // Listen to the history object from the container app
