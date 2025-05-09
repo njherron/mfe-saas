@@ -46,7 +46,12 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
   },
 }));
-
+/**
+ * This is the SignUp component
+ * @param onSignIn - This is a callback function that is called when the user signs in
+ * @returns {Element}
+ * @constructor
+ */
 export default function SignUp({ onSignIn }) {
   const classes = useStyles();
 

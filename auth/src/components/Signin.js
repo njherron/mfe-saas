@@ -50,6 +50,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * SignIn component
+ * @param onSignIn - This is a callback function that is called when the user signs in
+ * @returns {Element}
+ * @constructor
+ */
 export default function SignIn({ onSignIn }) {
   const classes = useStyles();
 
