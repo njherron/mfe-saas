@@ -23,7 +23,7 @@ const devConfig = {
             template: './public/index.html'
         }),
         new ModuleFederationPlugin({
-            name: 'dashboard',
+            name: 'dashboardModule',
             filename: 'remoteEntry.js',
             exposes: {
                 './DashboardApp' : './src/bootstrap'

@@ -17,7 +17,9 @@ module.exports = {
         ]
     },
     plugins: [
+        // this plugin will inject the script tag including the webpack main.js into the index.html file
         new HtmlWebpackPlugin({
+            // this is the template file that will be used to generate the index.html file
             template: './public/index.html'
         })
     ]

@@ -1,4 +1,4 @@
-import { mount } from 'dashboard/DashboardApp';
+import { mount } from 'dashboardMfe/DashboardApp';
 import React, {useRef, useEffect} from 'react';
 
 
